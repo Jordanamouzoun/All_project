@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <script>
+    function validateForm() {
+        const champ = document.querySelector("#myInput");
+        const content = champ.value;
+        if (content.length == 0)
+            alert("Enter the correct value!");
+        else
+            alert("success submition!");
+        return;
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return validateForm()">
+    <input type="text" id="myInput" placeholder="Enter a value" />
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    .calculator {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .calculator input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    .calculator  {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .calculator button {
+      width: 100%;
+      padding: 10px;
+      background-color:rgb(100, 100, 253);
+      color: white;
+      border: 2px solid black;
+      cursor: pointer;
+    }
+    .calculator button:hover {
+        background-color:blue
+    }
+    .card {
+    width: 93%;
+      padding: 20px;
+      background-color:white;
+      color: black;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="number" id="num1" placeholder="Enter number 1" />
+    <input type="number" id="num2" placeholder="Enter number 2" />
+    <div class="card", id="resultat"></div>
+    <button onclick="add()">Add</button>
+    <button onclick="substract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function add() {
+        var saisi1 = document.querySelector("#num1").value;
+        var saisi2 = document.querySelector("#num2").value;
+        var result = saisi1 + " + " + saisi2 + " = " + (Number(saisi1) + Number(saisi2))
+        const num1 = document.getElementById("resultat");
+        num1.textContent = result;
+    }
+		const substract = function() {
+            var saisi1 = document.querySelector("#num1").value;
+            var saisi2 = document.querySelector("#num2").value;
+            var result = saisi1 + " - " + saisi2 + " = " + (Number(saisi1) - Number(saisi2))
+            const num1 = document.getElementById("resultat");
+            num1.textContent = result;
+		}
+		let multiply = () => {
+            var saisi1 = document.querySelector("#num1").value;
+            var saisi2 = document.querySelector("#num2").value;
+            var result = saisi1 + " x " + saisi2 + " = " + (Number(saisi1) * Number(saisi2))
+            const num1 = document.getElementById("resultat");
+            num1.textContent = result;
+		};
+    function divide() {
+        var saisi1 = document.querySelector("#num1").value;
+        var saisi2 = document.querySelector("#num2").value;
+        var result = saisi1 + " / " + saisi2 + " = " + (Number(saisi1) / Number(saisi2))
+        const num1 = document.getElementById("resultat");
+        num1.textContent = result;
+    }
+  </script>
+</body>
+</html>

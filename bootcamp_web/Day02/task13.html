@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Paragraph Visibility</title>
+  <style>
+    #myParagraph {
+      display:none;
+    }
+  </style>
+  <script>
+    function toggleParagraphVisibility() {
+	    let elm = document.getElementById("myParagraph");
+        elm.style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <button onclick="toggleParagraphVisibility()">Toggle Paragraph</button>
+  <p id="myParagraph">This is the paragraph text.</p>
+</body>
+</html>
